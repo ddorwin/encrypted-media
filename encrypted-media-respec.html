@@ -4035,7 +4035,7 @@
 
     <script class="remove">
       /* Rewrite the URLs for the remaining resources. */
-      /* The diff service separates each word into a separate line, so use multiline comments. */
+      /* The diff service separates each word into a separate line, so use multiline comments strings without spaces. */
       if (isDiffService) {
         Array.from(document.getElementsByTagName("img")).forEach(function (element, index, array) {
           var urlComponents = element.src.split('/');
@@ -4043,7 +4043,7 @@
             return; /* The URL is for another server, so we do not need to fix it. */
           var file = urlComponents[urlComponents.length - 1];
           element.src = replacementOriginAndPath + file;
-          console.log("Rewrote URL as " + element.src); 
+          console.log("Rewrote-URL-as-" + element.src); 
         });
     
         Array.from(document.getElementsByTagName("link")).forEach(function (element, index, array) {
@@ -4052,7 +4052,7 @@
             return; /* The URL is for another server, so we do not need to fix it. */
           var file = urlComponents[urlComponents.length - 1];
           element.href = replacementOriginAndPath + file;
-          console.log("Rewrote URL as " + element.href); 
+          console.log("Rewrote-URL-as-" + element.href); 
         });
       }
     </script>
