@@ -4034,28 +4034,28 @@
       </table>
     </section>
 
+    <script class="remove">
+      // Rewrite the URLs for the remaining resources.
+      if (isDiffService) {
+        Array.from(document.getElementsByTagName("img")).forEach(function (element, index, array) {
+          var urlComponents = element.src.split('/');
+          if (urlComponents[2] != diffServiceHostName)
+            return; // The URL is for another server, so we do not need to fix it.
+          var file = urlComponents[urlComponents.length - 1];
+          element.src = replacementOriginAndPath + file;
+          console.log("Rewrote URL as " + element.src); 
+        });
+    
+        Array.from(document.getElementsByTagName("link")).forEach(function (element, index, array) {
+          var urlComponents = element.href.split('/');
+          if (urlComponents[2] != diffServiceHostName)
+            return; // The URL is for another server, so we do not need to fix it.
+          var file = urlComponents[urlComponents.length - 1];
+          element.href = replacementOriginAndPath + file;
+          console.log("Rewrote URL as " + element.href); 
+        });
+      }
+    </script>
+    
   </body>
-
-  <script class="remove">
-    // Rewrite the URLs for the remaining resources.
-    if (isDiffService) {
-      Array.from(document.getElementsByTagName("img")).forEach(function (element, index, array) {
-        var urlComponents = element.src.split('/');
-        if (urlComponents[2] != diffServiceHostName)
-          return; // The URL is for another server, so we do not need to fix it.
-        var file = urlComponents[urlComponents.length - 1];
-        element.src = replacementOriginAndPath + file;
-        console.log("Rewrote URL as " + element.src); 
-      });
-
-      Array.from(document.getElementsByTagName("link")).forEach(function (element, index, array) {
-        var urlComponents = element.href.split('/');
-        if (urlComponents[2] != diffServiceHostName)
-          return; // The URL is for another server, so we do not need to fix it.
-        var file = urlComponents[urlComponents.length - 1];
-        element.href = replacementOriginAndPath + file;
-        console.log("Rewrote URL as " + element.href); 
-      });
-    }
-  </script>
 </html>
