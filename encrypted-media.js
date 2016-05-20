@@ -1,6 +1,4 @@
 (function() {
-  console.log('RUNNING encrypted-media.js!')
-
   var EME_spec_url = "http://www.w3.org/TR/encrypted-media/";
   var HTML_spec_url = "http://www.w3.org/TR/html5/embedded-content-0.html";
   var DOM_spec_url = "https://www.w3.org/TR/dom/";
@@ -569,6 +567,4 @@
   window.encryptedMediaAddDefinitionInfo = encryptedMediaAddDefinitionInfo;
   window.encryptedMediaPreProcessor = encryptedMediaPreProcessor;
   window.encryptedMediaPostProcessor = encryptedMediaPostProcessor;
-  
-  console.log('DONE encrypted-media.js!')
 })();
