@@ -4287,7 +4287,7 @@ interface <span class="idlInterfaceID">MediaKeySession</span> : <span class="idl
                               </p>
                             </div>
                           </dd>
-                          <dt>If <var>sanitized response</var> contains a <a href="#record-of-license-destruction">record of license destruction</a> acknowledgement and <var>sessionType</var> is <code><a href="#idl-def-MediaKeySessionType.persistent-license">"persistent-license"</a></code></dt>
+                          <dt>If <var>sessionType</var> is <code><a href="#idl-def-MediaKeySessionType.persistent-license">"persistent-license"</a></code> and <var>sanitized response</var> contains a <a href="#record-of-license-destruction">record of license destruction</a> acknowledgement</dt>
                           <dd>
                             <p>Run the following steps:</p>
                             <ol>
@@ -4305,7 +4305,7 @@ interface <span class="idlInterfaceID">MediaKeySession</span> : <span class="idl
                               </li>
                             </ol>
                           </dd>
-                          <dt>If <var>sanitized response</var> contains a <a href="#record-of-key-usage">record of key usage</a> acknowledgement and <var>sessionType</var> is <code><a href="#idl-def-MediaKeySessionType.persistent-usage-record">"persistent-usage-record"</a></code></dt>
+                          <dt>If <var>sessionType</var> is <code><a href="#idl-def-MediaKeySessionType.persistent-usage-record">"persistent-usage-record"</a></code> and <var>sanitized response</var> contains a <a href="#record-of-key-usage">record of key usage</a> acknowledgement</dt>
                           <dd>
                             <p>Run the following steps:</p>
                             <ol>
